@@ -1,76 +1,245 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarella Venkat | Portfolio</title>
-  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    // Ensure page loads at top on refresh / navigation
+    window.onbeforeunload = function () { window.scrollTo(0, 0); };
+  </script>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>Sarella Venkat</h1>
-      <p>Aspiring Front-End Developer | Pursuing B.Tech in CSM (AIML)</p>
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-row">
+      <a class="brand" href="#hero">Sarella Venkat</a>
+
+      <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span class="menu-icon"></span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
+        <li role="none"><a role="menuitem" href="#education">Education</a></li>
+        <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+        <li role="none"><a role="menuitem" href="#certifications">Certifications</a></li>
+        <li role="none"><a role="menuitem" href="#experience">Experience</a></li>
+        <li role="none"><a role="menuitem" href="#strengths">Strengths</a></li>
+        <li role="none"><a role="menuitem" href="#hobbies">Hobbies</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow">Hello, I’m</p>
+        <h1 class="hero-title">Sarella <span class="accent">Venkat</span></h1>
+        <p class="hero-sub">Aspiring Front-End Developer • AI/ML Enthusiast • B.Tech CSM (AIML)</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="#contact">Get in Touch</a>
+          <a class="btn outline" href="./resume_venkat_sarella.pdf" download>Download Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Simple decorative card — replace with a headshot if you want -->
+        <div class="profile-card" aria-hidden="true">
+          <div class="profile-gradient"></div>
+          <div class="profile-info">
+            <h3>Sarella Venkat</h3>
+            <p>Front-End Developer (Aspiring)</p>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="card">
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container content-card">
       <h2>About Me</h2>
-      <p>
-        I'm a B.Tech student in Computer Science and Engineering (CSM – AIML) at St. Peter’s Engineering College, Hyderabad. Passionate about front-end development, I enjoy working with clean code, solving problems, and continuously exploring new technologies.
-      </p>
-    </section>
+      <p>Motivated and enthusiastic B.Tech 3rd-year student in Computer Science &amp; Engineering (AIML) at St. Peter’s Engineering College, Hyderabad, with a Diploma in Mechanical Engineering. Seeking internships and projects to apply AI/ML and software development skills to real-world problems.</p>
+    </div>
+  </section>
 
-    <section class="card">
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container content-card">
       <h2>Skills</h2>
-      <ul>
-        <li>Python, C, Java</li>
-        <li>HTML, CSS, JavaScript (Learning)</li>
-        <li>GitHub, VS Code, Jupyter Notebook, IDLE</li>
-        <li>Basic SQL, Operating Systems</li>
-        <li>AutoCAD (Mechanical Background)</li>
-      </ul>
-    </section>
+      <div class="skills-grid">
+        <div class="skill">Python</div>
+        <div class="skill">C</div>
+        <div class="skill">Java (Basics)</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Scikit-learn</div>
+        <div class="skill">Matplotlib</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Jupyter Notebook</div>
+        <div class="skill">VS Code</div>
+        <div class="skill">AutoCAD</div>
+      </div>
+    </div>
+  </section>
 
-    <section class="card">
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container content-card">
+      <h2>Education</h2>
+      <ul class="info-list">
+        <li><strong>B.Tech — Computer Science &amp; Engineering (AIML)</strong>, St. Peter’s Engineering College, Hyderabad (2024–Present) — CGPA: 7.25 / 10</li>
+        <li><strong>Diploma — Mechanical Engineering</strong>, Government Polytechnic College, Medchal (2021–2024) — GPA: 8.35 / 10</li>
+        <li><strong>SSC</strong>, Tagore’s High School, Quthbullapur, Hyderabad (2021) — GPA: 9.0 / 10</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container content-card">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>AI-Based Smart Water Quality Detection System</strong> – Classified water quality using Decision Tree algorithm based on pH, TDS, and turbidity values.</li>
-      </ul>
-    </section>
+      <div class="project">
+        <h3>AI-Based Smart Water Quality Detection System</h3>
+        <p>Used pH, TDS and turbidity sensor data with a Decision Tree model to classify water as Safe / Unsafe. Targeted for rural & coastal areas lacking lab access. <em>Technologies: Python, Machine Learning</em>.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="card">
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
+    <div class="container content-card">
       <h2>Certifications</h2>
-      <ul>
-        <li>Python for Data Analysis – Coursera</li>
+      <ul class="info-list">
+        <li>AI Tools Workshop – be10x (2025)</li>
+        <li>Python for Data Analysis: Pandas &amp; NumPy – Coursera</li>
         <li>Data Analysis with Python – IBM</li>
         <li>Gender Equality – UWA via Coursera</li>
         <li>Python Data Visualization – Rice University</li>
-        <li>GenAI for Everyone – Coursera</li>
-        <li>AI Tools Workshop – be10x</li>
+        <li>Data Visualization with Python &amp; R – Northeastern University</li>
+        <li>GenAI for Everyone – Coursera (2025)</li>
+        <li>Introduction to Python – Infosys</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section class="card">
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container content-card">
       <h2>Experience</h2>
-      <p><strong>Industrial Apprentice – Quality Department</strong><br />
-        RCKWELL Industries Ltd, Medchal (Jun–Nov 2023)<br />
-        Focused on product inspection, quality control, and machinery operations (CTL, Shearing, Foaming).
-      </p>
-    </section>
+      <p><strong>Quality Apprentice</strong> — ROCKWELL Industries Ltd, Medchal (Jun–Nov 2023)<br>
+      Assisted in inspection and testing of parts and final products; gained hands-on experience in quality control procedures.</p>
+    </div>
+  </section>
 
-    <section class="card contact">
+  <!-- STRENGTHS -->
+  <section id="strengths" class="section">
+    <div class="container content-card">
+      <h2>Strengths</h2>
+      <ul class="info-list">
+        <li>Quick learner &amp; adaptable</li>
+        <li>Strong problem-solving &amp; analytical skills</li>
+        <li>Detail-oriented &amp; quality-focused</li>
+        <li>Good communication &amp; teamwork</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies" class="section">
+    <div class="container content-card">
+      <h2>Hobbies &amp; Interests</h2>
+      <ul class="info-list">
+        <li>Playing guitar (Telugu &amp; English church music)</li>
+        <li>Reading tech blogs &amp; exploring AI innovations</li>
+        <li>Volunteering &amp; community service</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container content-card contact-card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:venkatsarella12@gmail.com">venkatsarella12@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/venkat-sarella-01b645333" target="_blank">linkedin.com/in/venkat-sarella</a></p>
-      <p>GitHub: <a href="https://github.com/venkatsarella12" target="_blank">github.com/venkatsarella12</a></p>
-    </section>
-  </main>
+      <p>Phone: <a href="tel:+916305210365">+91-63052-10365</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/venkat-sarella-01b645333" target="_blank" rel="noopener">linkedin.com/in/venkat-sarella</a></p>
+      <p>GitHub: <a href="https://github.com/venkatsarella12" target="_blank" rel="noopener">github.com/venkatsarella12</a></p>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    &copy; 2025 Sarella Venkat | Portfolio Website
+    <div class="container">
+      <small>&copy; 2025 Sarella Venkat — Built with care</small>
+    </div>
   </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile menu toggle
+    (function () {
+      const menuBtn = document.getElementById('menu-btn');
+      const navLinks = document.getElementById('nav-links');
+
+      menuBtn.addEventListener('click', () => {
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true' || false;
+        menuBtn.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('open');
+        menuBtn.classList.toggle('open');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('#nav-links a').forEach(a => {
+        a.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.classList.remove('open');
+        });
+      });
+
+      // Close menu on outside click (mobile)
+      document.addEventListener('click', (e) => {
+        const withinNav = e.composedPath().includes(navLinks) || e.composedPath().includes(menuBtn);
+        if (!withinNav && navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.classList.remove('open');
+        }
+      });
+    })();
+  </script>
+  <script>
+  // Animate skills when in view
+  document.addEventListener("DOMContentLoaded", function () {
+    const skills = document.querySelectorAll(".skill");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    skills.forEach(skill => observer.observe(skill));
+  });
+</script>
+
 </body>
 </html>
